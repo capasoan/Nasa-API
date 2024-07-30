@@ -1,5 +1,7 @@
 # Welcome to your Expo app 👋
 
+La aplicación muestra imágenes reales proporcionadas diariamente por la NASA a través de su API. Cada imagen viene acompañada de una descripción detallada que proporciona contexto y explica su significado, origen y cualquier fenómeno astronómico relevante que pueda estar asociado con la imagen. Esta aplicación es ideal para los entusiastas del espacio, los estudiantes y cualquier persona interesada en la astronomía, ya que proporciona acceso directo y actualizado a contenido visual y educativo de alta calidad.
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
