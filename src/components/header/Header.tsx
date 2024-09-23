@@ -26,18 +26,20 @@ const styles = StyleSheet.create({
   },
   rigthContainer: {
     flex: 1,
-    padding: 30,
+    padding: 10,
     alignItems: "flex-end",
   },
   leftContainer: {
     flex: 1,
-    padding: 30,
+    padding: 10,
     alignItems: "flex-start",
   },
   tittle: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "white",
   },
+
   image: {
     width: 60,
     height: 60,

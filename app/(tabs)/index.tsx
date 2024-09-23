@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
-import Home from "@/src/views/Home";
+import Routes from "@/src/routes/Routes";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <Home />
+      <Routes />
     </SafeAreaView>
   );
 }
