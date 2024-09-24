@@ -1,16 +1,20 @@
 import React, { FC } from "react";
-import { PostImage as PostImageType } from "../../types";
-
+import { PostImage as PostImageType, RootStackParams } from "../../types";
 import { View, Text, Button, StyleSheet } from "react-native";
+import { usePostImageNavigation } from "@/src/Hooks/usePostImageNavigation";
 
-const PostImage: FC<PostImageType> = ({ title, date }) => {
-  //   console.log("PostImage", PostImage);
+const PostImage: FC<PostImageType> = ({ title, date, explanation, url }) => {
+  const handleViewPress = usePostImageNavigation();
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>{title}</Text>
       <Text style={styles.fecha}>{date}</Text>
       <View style={styles.boton}>
-        <Button title="View"></Button>
+        <Button
+          title="View"
+          onPress={() => handleViewPress(date!, title!, explanation!, url!)}
+        ></Button>
       </View>
     </View>
   );
