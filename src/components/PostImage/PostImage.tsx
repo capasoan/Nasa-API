@@ -1,41 +1,24 @@
 import React, { FC } from "react";
-import { PostImage as PostImageType, RootStackParams } from "../../types";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { PostImage as PostImageType } from "../../types";
+import { View, Text, Button } from "react-native";
 import { usePostImageNavigation } from "@/src/Hooks/usePostImageNavigation";
+import { sharedStyles } from "../../Styles/Styles";
 
 const PostImage: FC<PostImageType> = ({ title, date, explanation, url }) => {
   const handleViewPress = usePostImageNavigation();
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>{title}</Text>
-      <Text style={styles.fecha}>{date}</Text>
-      <View style={styles.boton}>
+    <View style={sharedStyles.container}>
+      <Text style={sharedStyles.title}>{title}</Text>
+      <Text style={sharedStyles.date}>{date}</Text>
+      <View style={sharedStyles.buttonContainer}>
         <Button
           title="View"
-          onPress={() => handleViewPress(date!, title!, explanation!, url!)}
+          onPress={() => handleViewPress(date, title, explanation, url)}
         ></Button>
       </View>
     </View>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "rgba(18, 39, 113, 255)",
-    borderRadius: 25,
-    marginBottom: 12,
-    padding: 16,
-  },
-  titulo: {
-    color: "white",
-    fontWeight: "bold",
-    fontSize: 14,
-  },
-  fecha: {
-    color: "white",
-  },
-  boton: {
-    alignItems: "flex-end",
-  },
-});
+
 export default PostImage;
